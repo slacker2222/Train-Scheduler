@@ -50,9 +50,9 @@ $(document).ready(function () {
 
 
     // similar to on value: 
-    database.ref().on("child_added", function (childsnapshot) {
+    database.ref().on("child_added", function (childSnapshot) {
         var newTrain = childSnapshot.val().trainName;
-        var newLocation = childSnapshot.val(), destination;
+        var newLocation = childSnapshot.val().destination;
         var newFirstTrain = childSnapshot.val().firstTrain;
         var newFreq = childSnapshot.val().frequency;
 
